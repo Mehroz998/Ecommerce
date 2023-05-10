@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="indexcart.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <div class="logo"><span>E</span>-Commerce<span>.</span></div>
+                <ul>
+                    <li class="item"><a href="#">Home</a></li>
+                    <li class="item"><a href="#featuredproduct">Featured Product</a></li>
+                    <li class="item"><a href="#ourproducts">Our Products</a></li>
+                    <li class="item"><a href="#">Quick Links</a></li>
+                </ul>
+                <div class="cart"><span><a href="#">Cart :</span></a><span id="cart">0</span></div>
+            </nav>
+            
+        </div>
+        <div class="background" id="background">
+            <div class="logo1"><span>E</span>-Commerce<span>.</span></div>
+            <button class="cross" onclick="loghide()">x</i></button>
+            <div class="container1" id="container1">
+                <h1>Login</h1>
+                <input type="email" name="email" id="email" placeholder="Enter Your Email" onblur="addEmail()">
+                <input type="password" name="password" id="pass" placeholder="Enter Your password"/>
+                <button id="show">Show Password</button>
+                <button type="submit" onclick="submit()">Continue</button>
+                <span>or Connect with Social Media</span>
+                <button type="submit" id="face"><i class="fa-brands fa-facebook-f"></i>Sign up </button>
+                <button type="submit" id="google"><i class="fa-brands fa-google"></i>Sign in with Google</button>
+            </div>
+        </div>
+
+    </header>
+    
+    <section>
+        <div class="container intro">
+            <!-- <div class="products">Item no.</div> -->
+            <div class="products">Product Name</div>
+            <div class="products">Price</div>
+            <div class="products">Quantity</div>
+            <div class="products">SubTotal</div>
+            <div class="products">Remove</div>
+        </div>
+        <!-- <div class="container">
+            <div class="products">01</div>
+            <div class="products">Iphone 14 Pro</div>
+            <div class="products">Rs : 599,999</div>
+            <input type="number" id="quantity" class="products">
+            <div class="products">0</div>
+            <button class="products removeBtn" id="removeBtn">Remove</button>
+        </div>
+        <div class="container">
+            <div class="products">02</div>
+            <div class="products">DSLR Camera</div>
+            <div class="products">Rs : 699,999</div>
+            <input type="number" id="quantity" class="products">
+            <div class="products">0</div>
+            <button class="products removeBtn" id="removeBtn">Remove</button>
+        </div>-->
+
+    </section>
+    <div class="btn" onclick="showlogin()">CHECKOUT</div>
+
+    <script src="indexcart.js"></script>
+</body>
+</html>
