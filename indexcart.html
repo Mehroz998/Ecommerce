@@ -6,21 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="indexcart.css">
+    <script src="https://kit.fontawesome.com/8b00f4755d.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <div class="navbar">
             <nav>
                 <div class="logo"><span>E</span>-Commerce<span>.</span></div>
-                <ul>
+                <ul id="sidemenu">
                     <li class="item"><a href="#">Home</a></li>
                     <li class="item"><a href="#featuredproduct">Featured Product</a></li>
                     <li class="item"><a href="#ourproducts">Our Products</a></li>
                     <li class="item"><a href="#">Quick Links</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
                 <div class="cart"><span><a href="#">Cart :</span></a><span id="cart">0</span></div>
             </nav>
-            
+            <i class="fa-solid fa-caret-down" onclick="openmenu()"></i>
         </div>
         <div class="background" id="background">
             <div class="logo1"><span>E</span>-Commerce<span>.</span></div>
@@ -69,5 +71,15 @@
     <div class="btn" onclick="showlogin()">CHECKOUT</div>
 
     <script src="indexcart.js"></script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
 </body>
 </html>
