@@ -13,13 +13,13 @@
     <header>
         <div class="navbar">
             <nav>
-                <div class="logo"><span>E</span>-Commerce<span>.</span></div>
+                <div class="logo"><a href="#"><span>E</span>-Commerce<span>.</span></a></div>
                 <ul id="sidemenu">
                     <li class="item"><a href="#">Home</a></li>
                     <li class="item"><a href="#featuredproduct">Featured Product</a></li>
                     <li class="item"><a href="#ourproducts">Our Products</a></li>
                     <li class="item"><a href="#">Quick Links</a></li>
-                    <li class="item"><a href="#background" onclick="showlogin()" id="signup">Sign up</a></li>
+                    <li class="item"><a href="#background" onclick="showlogin()" id="signup">Log In</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
                 <div class="cart"><span><a href="indexcart.html">Cart :</span></a><span id="cart">0</span></div>
@@ -141,12 +141,12 @@
       <button class="cross" onclick="loghide()">x</i></button>
       <div class="container1" id="container1">
           <h1>Login</h1>
-          <input type="email" name="email" id="email" placeholder="Enter Your Email" onblur="addEmail()">
-          <input type="password" name="password" id="pass" placeholder="Enter Your password"/>
+          <input type="email" name="email" id="email" class="input1" placeholder="Enter Your Email" onblur="addEmail()">
+          <input type="password" name="password" id="pass" class="input1" placeholder="Enter Your password"/>
           <button id="show">Show Password</button>
           <button type="submit" onclick="submit()">Continue</button>
           <span>or Connect with Social Media</span>
-          <button type="submit" id="face"><i class="fa-brands fa-facebook-f"></i>Sign up </button>
+          <button type="submit" id="face" onclick="signuppage()">Sign up </button>
           <button type="submit" id="google"><i class="fa-brands fa-google"></i>Sign in with Google</button>
       </div>
       <div class="container2" id="container2">

@@ -46,6 +46,7 @@ let show = document.getElementById("show");
 let pass = document.getElementById("pass");
 let emailcheck = document.getElementById("email");
 let inputs = document.getElementsByClassName("input");
+let input1 = document.getElementsByClassName("input1");
 
 function addEmail(){
     const existingEmail = document.getElementById("email");
@@ -65,9 +66,9 @@ function addEmail(){
     
 }
 function submit(){
-    for(let i=0 ; i<input.length ; i++){
-        if(input[i].value == ""){
-            let errorTxt = `${input[i].name} is required`
+    for(let i=0 ; i<input1.length ; i++){
+        if(input1[i].value == ""){
+            let errorTxt = `${input1[i].name} is required`
             error.push(errorTxt)
         }
     }
@@ -85,15 +86,17 @@ function submit(){
 
     let password = localStorage.getItem("password");
     let email = localStorage.getItem("email");
-
+    let check = false
     if(pass.value == password && emailcheck.value == email){
         alert("Thanks For Login this Website");
         document.getElementById("background").style.display = "none";
         document.getElementById("sidemenu").children[4].innerHTML = "";
         // console.log(document.getElementById("sidemenu").children[4].innerHTML)
-        localStorage.setItem("page",document.getElementById("sidemenu").children[4].innerHTML);
+        check = true;
+        localStorage.setItem("check",check);
     }
     else if(pass.value == password && emailcheck.value != email){
+        console.log(email , password);
         alert("Email is incorrect");
     }
     else if(pass.value != password && emailcheck.value == email){
@@ -117,10 +120,18 @@ show.addEventListener("click" , (e)=>{
 
 function showlogin(){
     document.getElementById("background").style.display = "flex";
+    document.getElementById("container1").style.display = "flex";
+    document.getElementById("container2").style.display = "none";
     document.getElementById("background").style.position = "fixed";
 }
 function loghide(){
     document.getElementById("background").style.display = "none";
+}
+function signuppage(){
+    document.getElementById("background").style.display = "flex";
+    document.getElementById("container1").style.display = "none";
+    document.getElementById("container2").style.display = "flex";
+    document.getElementById("background").style.position = "fixed";
 }
 
 function loginpage(){

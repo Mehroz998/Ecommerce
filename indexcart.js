@@ -103,9 +103,10 @@ show.addEventListener("click" , (e)=>{
         show.innerHTML = "Show Password";
     }
 })
-let a = localStorage.getItem("page")
+let a = localStorage.getItem("check");
+console.log(a);
 function showlogin(){
-    if(a == ""){
+    if(a == "true"){
         alert("You already log in")
     }
     else{

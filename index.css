@@ -420,3 +420,15 @@ footer{
     }
     
 }
+@media only screen and (max-width: 1120px){
+ 
+    nav{
+        font-size: 18px;
+    }
+    .box{
+        justify-content: space-around;
+    }
+    .items{
+        margin-bottom: 20px;
+    }
+}
