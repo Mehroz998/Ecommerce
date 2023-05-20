@@ -68,7 +68,7 @@ nav ul li a:hover{
     width: 90vw;
     margin: 10px auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr;
+    grid-template-columns: 1fr 0.8fr 0.5fr 0.8fr 1fr;
     grid-gap: 10px;
     align-items: center;
     justify-items: center;
