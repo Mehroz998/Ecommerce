@@ -316,7 +316,8 @@ footer{
 }
 
 
-@media only screen and (max-width: 500px){
+/* @media only screen and (max-width: 500px){ */
+@media only screen and (max-width: 750px){
     nav ul li{
         display: none;
     }
@@ -420,7 +421,7 @@ footer{
     }
     
 }
-@media only screen and (max-width: 1120px){
+@media only screen and (max-width: 1200px ){
  
     nav{
         font-size: 18px;
@@ -431,4 +432,16 @@ footer{
     .items{
         margin-bottom: 20px;
     }
+}
+@media only screen and (max-width: 900px ){
+ 
+    nav{
+        font-size: 12px;
+    }
+    /* .box{
+        justify-content: space-around;
+    }
+    .items{
+        margin-bottom: 20px;
+    } */
 }
