@@ -23,15 +23,24 @@ let arrprice = []
             }
         })
         addtocart[i].addEventListener("click",(e)=>{
-            res = Number(res) + 1;
-            localStorage.setItem('cartvalue' , res);
-            document.getElementById("cart").innerHTML = localStorage.getItem('cartvalue');
             let addtocartE1 = e.target.parentElement
             let proname = addtocartE1.children[1].innerHTML;
             let proprice = addtocartE1.children[4].textContent;
-            arrname.push(proname)
-            arrprice.push(proprice)
+            // for(let j=0 ; j<arrname.length ; j++){
+                if(arrname.includes(proname)){
+                    alert("You have already add this item")
+                }
+                else{
+                    arrname.push(proname)
+                    arrprice.push(proprice)
+                    res = Number(res) + 1;
+                    localStorage.setItem('cartvalue' , res);
+                    document.getElementById("cart").innerHTML = localStorage.getItem('cartvalue');
+                }
+            // }
+            console.log(arrname);
             let strname = JSON.stringify(arrname);
+            console.log(strname)
             let strprice = JSON.stringify(arrprice);
             localStorage.setItem('Proname',strname);
             localStorage.setItem('Proprice',strprice);
@@ -147,18 +156,12 @@ function loginpage(){
     }
     let pass1 = document.getElementById("pass2").value;
     let pass2 = document.getElementById("pass3").value;
-
     if(pass1 != pass2){
         alert("Re_check password is incorrect");
     }
     else if(pass1.length < 6){
         alert("Your Password must have atleast 6 characters");
     }
-    // else{
-    //     document.getElementById("sidemenu").children[4].innerHTML = "";
-    // }
-    // input[0].value = "";
-    // input[1].value = "";
     else{
     document.getElementById("container1").style.display = "flex"
     document.getElementById("container2").style.display = "none";
@@ -166,4 +169,20 @@ function loginpage(){
     localStorage.setItem("email",document.getElementById("email2").value);
     localStorage.setItem("password",pass1);
 }
-
+function addEmail2(){
+    const existingEmail2 = document.getElementById("email2");
+    // function will stop if @ found
+    if(existingEmail2.value == ""){
+        return 0
+    }
+    if(existingEmail2.value.includes(" ")){
+        alert("Please remove space");
+    }
+    else if (existingEmail2.value.includes("@gmail.com")) {
+        return 0
+    }
+    else{
+        existingEmail2.value = existingEmail2.value + "@gmail.com"; 
+    }
+    
+}

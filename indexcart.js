@@ -18,8 +18,8 @@ for(let i in setname){
     createElement.innerHTML = `
     <div class="products">${setname[i]}</div>
     <div class="products item-price">${setprice[i]}</div>
-    <input type="number" class="products qty" placeholder="0">
-    <div class="products sub" id="sub">Rs : 0</div>
+    <input type="number" class="products qty" placeholder="1">
+    <div class="products sub" id="sub">${setprice[i]}</div>
     <button class="products removeBtn" id="removeBtn">Remove</button>
     `
     section.append(createElement);
